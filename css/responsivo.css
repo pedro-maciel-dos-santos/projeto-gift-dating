@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #mainSlider .carousel-inner {
+    height: 60vh;
+  }
+
+  #mainSlider .carousel-caption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container-fluid {
+    padding: 0 1rem;
+  }
+
+  #mainSlider .carousel-inner {
+    height: 60vh;
+  }
+
+  #mainSlider .carousel-caption {
+    font-size: 0.8rem;
+  }
+}

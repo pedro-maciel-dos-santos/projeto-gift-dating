@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+/* GERAIS */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+  overflow-y: auto;
+  background-color: #050631; /*#0d0d0d*/
+  color: #fff;
+  text-align: center;
+}
+
+h1,
+p {
+  margin: 1rem 0;
+}
+
+.container {
+  padding: 70px 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.extra-space {
+  height: 100px;
+}
+
+/* CORAÇÕES */
+
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: calc(10vw + 80 * var(--rand));
+  /* controla horizontal sem passar 100vw */
+  color: #e91e63;
+  top: -20px;
+  font-size: 24px;
+  animation: fall 5s linear infinite;
+  z-index: 999;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* AUDIO */
+
+.audio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.music-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.audio {
+  padding-top: 25px;
+}
+
+
+
+/* CAROUSEL */
+
+.container-fluid {
+  padding: 0;
+}
+
+.carousel-indicators[data-bs-target] {
+  background-color: #222;
+  opacity: 0.8;
+}
+
+#mainSlider {
+  max-width: 600px;
+  margin: auto;
+}
+
+#mainSlider .carousel-inner {
+  height: 90vh;
+  /* defina uma altura adequada ao seu layout */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#mainSlider .carousel-item {
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* evita distorção e cobre todo o espaço */
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+  border-radius: 20px;
+}
+
+.carousel-indicators .active {
+  background-color: #65daf9;
+}
+
+/* CONTADOR */
+
+.contador-romantico {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  background: rgba(255, 105, 180, 0.07);
+  /* rosa clarinho transparente */
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px rgba(255, 192, 203, 0.2);
+  line-height: 1.5;
+}
+
+.contador-romantico::before {
+  content: "❤️ Eu te amo há:";
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #ff6b9f;
+}
+
+/* TEXTO */
+
+.linha-romantica {
+  width: 80%;
+  margin: 1rem auto;
+  border: none;
+  border-top: 1px solid #fff;
+  opacity: 0.4;
+}
+
+.texto-romantico {
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  text-align: center;
+  padding: 0 1.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.texto-romantico em {
+  font-style: italic;
+  color: #ffb6c1;
+}
+
+/* BOTÃO CLIQUE */
+
+#telaInicial {
+  position: fixed;
+  inset: 0;
+  background-color: #050631; /*#0d0d0d*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#btnEntrar {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #ff6b9f;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+}
+
+#btnEntrar:hover {
+  transform: scale(1.05);
+  background-color: #ff85ac;
+}
