@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* TEMPO DE RELACIONAMENTO */
 
-const dataInicio = new Date("2023-10-31T00:00:00");
+const dataInicio = new Date("2025-09-22T00:00:00");
 
 function atualizarContador() {
   const agora = new Date();
@@ -87,7 +87,7 @@ function atualizarContador() {
   // Exibir no HTML
   document.getElementById("contador").innerHTML = `
       ${anos} ano${anos !== 1 ? 's' : ''}, 
-      ${meses} mês${meses !== 1 ? 'es' : ''}, 
+      ${meses} mes${meses !== 1 ? 'es' : ''}, 
       ${dias} dia${dias !== 1 ? 's' : ''}, 
       ${horas} hora${horas !== 1 ? 's' : ''}, 
       ${minutos} minuto${minutos !== 1 ? 's' : ''} e 
